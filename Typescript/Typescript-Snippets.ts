@@ -40,7 +40,7 @@ const approximatelyEqualTS = (
 
 /**
  *
- * @param {Array<string>} arr
+ * @param {Array<string[]>} arr
  * @param {string} delimiter
  * @returns {string}
  */

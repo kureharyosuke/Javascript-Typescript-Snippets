@@ -46,6 +46,12 @@ console.log(
 );
 console.log(`🚀 ~ file: Javascript-Snippets.js:28 ~ Math.PI`, Math.PI);
 
+/**
+ *
+ * @param {Array<string[]>} arr
+ * @param {string} delimiter
+ * @returns
+ */
 const arrayToCSVJS = (arr, delimiter = ",") =>
   arr.map((v) => v.map((x) => `${x}`).join(delimiter)).join("\n");
 
@@ -67,3 +73,20 @@ console.log(
     ";"
   )
 );
+
+// /**
+//  *
+//  * @param {*} arr
+//  * @param {*} listID
+//  * @returns
+//  */
+// const arrayToHtmlList = (arr, listID) =>
+//   ((el) => (
+//     (el = document.querySelector("#" + listID)),
+//     (el.innerHTML += arr.map((item) => `<li>${item}</li>`).join(""))
+//   ))();
+
+// console.log(
+//   "arrayToHtmlList",
+//   arrayToHtmlList(["item 1", "item 2"], "myListID")
+// );
