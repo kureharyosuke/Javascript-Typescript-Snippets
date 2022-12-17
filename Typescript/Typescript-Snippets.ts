@@ -37,3 +37,12 @@ const approximatelyEqualTS = (
   v2: number,
   epsilon: number = 0.001
 ): boolean => Math.abs(v1 - v2) < epsilon;
+
+/**
+ *
+ * @param {Array<string>} arr
+ * @param {string} delimiter
+ * @returns {string}
+ */
+const arrayToCSVTS = (arr: Array<string[]>, delimiter: string = ","): string =>
+  arr.map((v) => v.map((x) => `${x}`).join(delimiter)).join("\n");

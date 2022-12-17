@@ -45,3 +45,25 @@ console.log(
   Math.PI / 2.0
 );
 console.log(`🚀 ~ file: Javascript-Snippets.js:28 ~ Math.PI`, Math.PI);
+
+const arrayToCSVJS = (arr, delimiter = ",") =>
+  arr.map((v) => v.map((x) => `${x}`).join(delimiter)).join("\n");
+
+console.log(
+  "arrayToCSVJS",
+  arrayToCSVJS([
+    ["a", "b"],
+    ["c", "d"],
+  ])
+);
+
+console.log(
+  "arrayToCSVJS",
+  arrayToCSVJS(
+    [
+      ["a", "b"],
+      ["c", "d"],
+    ],
+    ";"
+  )
+);
