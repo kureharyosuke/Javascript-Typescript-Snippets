@@ -76,8 +76,8 @@ console.log(
 
 // /**
 //  *
-//  * @param {*} arr
-//  * @param {*} listID
+//  * @param {Array<string>} arr
+//  * @param {string} listID
 //  * @returns
 //  */
 // const arrayToHtmlList = (arr, listID) =>
@@ -90,3 +90,22 @@ console.log(
 //   "arrayToHtmlList",
 //   arrayToHtmlList(["item 1", "item 2"], "myListID")
 // );
+
+/**
+ *
+ * @param {Function} fn
+ * @param  {...any} args
+ * @returns
+ */
+const attempt = (fn, ...args) => {
+  try {
+    return fn(...args);
+  } catch (error) {
+    return error instanceof Error ? error : new Error(e);
+  }
+};
+
+const elements = attempt(function (selector) {
+  return document.querySelectorAll(selector);
+}, ">_>");
+if (elements instanceof Error) elements = []; // elements = []
